@@ -1,0 +1,23 @@
+<header class="container">
+    <a class="navbar-brand" href="{% url 'index' %}">
+        <i class="fas fa-book-open"></i>
+        Biblioteca
+    </a>
+    <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+    >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-link" href="{% url 'index' %}">Livros</a>
+            <a class="nav-link" href="#">Reserva</a>
+        </div>
+    </div>
+</header>
