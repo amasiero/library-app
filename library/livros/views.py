@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Livro
 
 
@@ -17,6 +17,9 @@ def livro(request, livro_id):
 
 
 def emprestimo(request):
+    if not request.user.is_authenticated:
+        return redirect('index')
+
     dados = {
         'livros': Livro.objects.filter(emprestado=False)
     }
